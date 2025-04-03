@@ -1,0 +1,36 @@
+{
+  "name": "ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx ./index.ts",
+    "clean": "rm -rf ./node_modules ./package-lock.json",
+    "db:migrate": "tsx ./database/postgres/migrations/migrate.ts",
+    "db:studio": "drizzle-kit studio",
+    "db:drop": "drizzle-kit drop",
+    "db:push": "drizzle-kit push"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ai": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.38.4",
+    "drizzle-zod": "^0.6.1",
+    "nanoid": "^5.0.9",
+    "ollama": "^0.5.12",
+    "postgres": "^3.4.5",
+    "winston": "^3.17.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "drizzle-kit": "^0.30.2",
+    "prettier": "3.5.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
