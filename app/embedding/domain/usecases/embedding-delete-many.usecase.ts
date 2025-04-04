@@ -10,7 +10,7 @@ export class EmbeddingDeleteManyUseCase implements UseCase<Promise<void>> {
     try {
       await this.repository.delete();
     } catch (_) {
-      console.log(new EmbeddingDeleteException());
+      console.log(new EmbeddingDeleteException().message);
     }
   }
 }

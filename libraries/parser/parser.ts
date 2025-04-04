@@ -1,3 +1,3 @@
 export abstract class Parser {
-  public abstract parse(path: string): Map<string, string>;
+  public abstract parse(path: string): Promise<Map<string, string>>;
 }

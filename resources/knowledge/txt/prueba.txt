@@ -1,6 +1,205 @@
-El día de la Hispanidad
-El 12 de octubre es el día de la Hispanidad que celebra el descubrimiento de América en 1492. Este día coincide con la fiesta de la Virgen María del Pilar, que es el patrona de España.
 
-Actualmente, la Hispanidad se celebra dentro y fuera de España, aunque es una de las fiestas que más polémica generan. En muchos países de Latinoamérica el descubrimiento de América se asocia al comienzo de la colonización española y a la destrucción de las culturas locales nativas. Por este motivo, en América del Sur la fiesta se percibe como una reivindicación.
 
-En España la Hispanidad se festeja con un desfile militar y una recepción, encabezada por los Reyes, para el cuerpo diplomático en el Palacio Real
+
+Oscar Ivan Ludick
+Guadarrama
+ SENIOR FRONT END DEVELOPER
+
+Desarrollador FrontEnd con 8 años de experiencia en el desarrollo de software, intereses en nuevas tecnologías de aplicaciones web y aplicaciones móviles.
+Mi objetivo profesional es implementar las mejores prácticas de desarrollo para lograr aplicaciones robustas, escalables, eficientes y de entendimiento para desarrolladores de todos los niveles.
+
+
+Tecnologías
+Javascript: 8 año(s) | Typescript: 7 año(s) | Java: 3 año(s) | Angular: 7 año(s)
+Rol
+Senior Front End Developer
+Experiencia
+8 año(s)
+Conocimientos técnicos
+
+Nodejs | Nginx | Android
+Idiomas
+INGLÉS | A2
+
+
+
+EXPERIENCIA
+→ 20/03/2023 - Actualidad
+SENIOR FRONTEND DEVELOPER | Kairós Digital Solutions S.L. |
+
+Proyecto: Onboarding
+	•	Mantenimiento y desarrollo de nuevas características.
+	•	Implementación de servicios REST y manejo de errores catalogados.
+	•	Solución de problemas productivos y pre-productivos.
+	•	Soluciones e implementación de seguridad de Ethical Hacking en aplicativo y servidor web (nginx).
+	•	Atención de incidentes.
+	•	Mejoras en calidad de código, enfoque "Developer experience".
+	•	Implementación de patrones de diseño y mejores prácticas.
+	•	Migración de repositorio a poly-repo en combinación de mono-repo (Nx).
+	•	Automatización de despliegue de librerías Angular.
+	•	Consultoría en general para la solución de problemas.
+	•	Automatización de pruebas E2E, Selenium y Python..
+
+Tareas:
+	•	Peer-programming, shadowing y revisión de código.
+
+
+
+Retos conseguidos:
+	•	Automatización de documentación storybook.
+	•	Despliegue de librerías Angular en pipeline Jenkins.
+	•	Reducción de costo de GoogleMaps.
+
+Metodologías, herramientas y tecnologías usadas en el proyecto:
+	•	Lenguajes de programación y herramientas: TypeScript, Javascript, Python, Angular, Jest, Nx, Git, Nginx.
+	•	Metodología utilizada: Scrum.
+	•	Principios de desarrollo y arquitecturas: SOLID, Design Patterns.
+
+→ 01/09/2021 - 19/03/2023
+SENIOR FRONTEND DEVELOPER | HITSS CORPORATIVO
+Proyecto: Onboarding
+	•	Desarrollo aplicativo web totalmente adaptable para dispositivos móviles (Chrome, Safari, Firefox).
+	•	Mantenimiento y desarrollo de nuevas características.
+	•	Refactorización completa de proyecto sin afectar funcionalidad actual, para mejorar la escalabilidad y rendimiento de la iniciativa.
+	•	Implementación de técnicas pair programming y shadowing.
+	•	Generación de propuesta para una nueva versión de la iniciativa, así como su
+desarrollo e implementación de nuevas librerías desacopladas para facilitar el mantenimiento y escalabilidad del proyecto..
+
+Retos conseguidos:
+	•	Refactor completo de la iniciativa sin afectar funcionalidad actual.
+
+Metodologías, herramientas y tecnologías usadas en el proyecto:
+	•	Lenguajes de programación y herramientas: Typescript, JavaScript, Angular, Jest, Nx, Git, Nginx.
+	•	Metodología utilizada: Scrum.
+	•	Principios de desarrollo y arquitecturas: Design Patterns, SOLID.
+
+→ 01/04/2021 - 30/08/2021
+FRONTEND WEB DEVELOPER | APPVISORS SERVICIOS Y TECNOLOGÍA
+Proyecto:
+	•	Desarrollo en su totalidad de aplicativo FrontEnd para manejo de auditorias bancarias.
+	•	Automatización para la generación de módulos.
+	•	Implementación de versiones en componentes desacoplados.
+	•	Manejo de código limpio y estructurado así como altamente escalable.
+	•	Implementación de servicios REST y comunicación constante con el equipo BackEnd..
+
+Metodologías, herramientas y tecnologías usadas en el proyecto:
+	•	Lenguajes de programación y herramientas: Javascript, Typescript, Angular, Jest, Karma, Git.
+	•	Principios de desarrollo y arquitecturas: SOLID, Clean Code, Design Patterns.
+
+→ 01/08/2019 - 31/03/2021
+FRONTEND WEB DEVELOPER | everis
+Proyecto: Mantenimiento BackOffice Santec
+	•	Refactorización y seguimiento de aplicativos back-office.
+	•	Mantenimiento de micro-servicios y aplicativos web.
+	•	Consultoría en solución de problemas..
+
+Metodologías, herramientas y tecnologías usadas en el proyecto:
+	•	Lenguajes de programación y herramientas: Typescript, Javascript, Java, SpringBoot, SpringSecurity, Angular.
+	•	Principios de desarrollo y arquitecturas: SOLID.
+
+Proyecto: Telcel
+	•	Desarrollo de aplicativo móvil Android para mesas de ayuda Telcel.
+	•	Desarrollo de aplicativo móvil y web para seguimiento de empleados y prospectos.
+	•	Mantenimiento y mejoras de rendimiento del aplicativo BackEnd alojado en IBM websphere..
+
+Retos conseguidos:
+	•	Desarrollo en Kotlin 3 Meses.
+
+Metodologías, herramientas y tecnologías usadas en el proyecto:
+	•	Lenguajes de programación y herramientas: Javascript, Typescript, Kotlin, Angular, Android, Git.
+	•	Metodología utilizada: Kanban.
+	•	Principios de desarrollo y arquitecturas: SOLID.
+
+→ 01/01/2016 - 31/08/2019
+| QIBC
+Proyecto: Portales UNILEVER | Evaluaciones 360 | Inventarios
+	•	Mantenimiento de aplicativos web para evaluaciones 360.
+	•	Mantenimiento y desarrollo de web scrappers para la extracción y manipulación de datos.
+	•	Desarrollo de aplicativos Android 4.0 - 7.0 para el registro, consulta y seguimiento de inventarios.
+	•	Desarrollo de aplicativo FullStack para evaluación de empresas mediante roles de clientes y administradores..
+
+Metodologías, herramientas y tecnologías usadas en el proyecto:
+	•	Lenguajes de programación y herramientas: PHP, Javascript, Java, Android, AngularJs, Nodejs, MongoDB, SVN.
+→ 01/08/2015 - 01/01/2016
+JUNIOR SOFTWARE DEVELOPER | Universidad Autónoma de Querétaro
+Proyecto: Extracción de datos
+	•	Desarrollo de aplicativo BackEnd para la autenticación de "oauth" en distintas plataformas o redes sociales.
+	•	Extracción y almacenamiento de datos con el consentimiento del usuario..
+
+Metodologías, herramientas y tecnologías usadas en el proyecto:
+	•	Lenguajes de programación y herramientas: Javascript, Nodejs.
+
+
+CURSOS Y CERTIFICACIONES
+
+2024
+Angular | HACKERRANK
+2023
+Reactive Angular | Udemy
+2023
+NgRx | Udemy
+2023
+Security Angular | Udemy
+
+FORMACIÓN REGLADA
+
+2012 - 2016	LICENCIATURA EN INGENIERÍA SISTEMAS COMPUTACIONALES | Instituto
+Tecnológico de Querétaro
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

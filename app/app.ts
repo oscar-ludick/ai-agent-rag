@@ -21,6 +21,7 @@ export class App {
   private readonly embeddingFacade!: EmbeddingFacade;
 
   constructor() {
+    //this.parser = new ParserPDFService();
     this.parser = new ParserTextService();
     this.metadata = new MetadataService();
 
@@ -33,19 +34,20 @@ export class App {
     this.agent = new AgentOllama(model, alive);
   }
 
-  public async startChatAgent(query: string, onResponse: (content: string) => void): Promise<void> {
-    const resources = await this.getEmbeddingContentFromQuery(query);
+  public async startChatAgent(
+    prompt: string,
+    onResponse: (content: string) => void,
+  ): Promise<void> {
+    const resources = await this.getEmbeddingContentFromQuery(prompt);
+
     const options = {
+      prompt,
       resources,
-      prompt: query,
-      initialInstruction:
-        'You are a helpful assistant.\n' +
-        ' Follow the next instructions provided by the role: system.\n' +
-        ' All the instructions must be read/interpreted in english.\n' +
-        ' Always answer to the user in spanish, does not matter if the question is in english.\n' +
-        ' Use the knowledge base as the only resource to answer the user question.\n' +
-        ' Only respond to questions using information from the knowledge base.\n' +
-        ' if no relevant information is found on the knowledge base respond with: "Sorry, I don\'t know."',
+      initialInstruction: `SYSTEM "All the instructions must be read/interpreted in english."
+SYSTEM "Always answer to the user in spanish, does not matter the language."
+SYSTEM "Use the knowledge base as the only resource to answer the user question."
+SYSTEM "Only respond to questions using information from the knowledge base."
+SYSTEM "You only  answer based on provided knowledge base. If unsure, say exactly: 'Lo siento, no tengo información específica'"`,
       concurrentInstruction: 'Answer the next user question using this as the knowledge base:',
     };
     const chatId = this.agent.getId();
@@ -60,7 +62,7 @@ export class App {
   public async createKnowledgeBase(): Promise<void> {
     await this.resourceFacade.deleteManyUseCase.execute();
     await this.embeddingFacade.deleteManyUseCase.execute();
-    const contents = this.getDirectoryContent();
+    const contents = await this.getDirectoryContent();
     const metadata = this.getContentMetadata(contents);
     await this.updateKnowledgeBaseWithMetadata(metadata);
   }
@@ -82,7 +84,7 @@ export class App {
     }
   }
 
-  private getDirectoryContent(): Map<string, string> {
+  private getDirectoryContent(): Promise<Map<string, string>> {
     const directory = EnvUtil.load('DATA_DIRECTORY');
     return this.parser.parse(directory);
   }
@@ -94,7 +96,7 @@ export class App {
   }
 
   public async getEmbeddingContentFromQuery(query: string): Promise<string[]> {
-    const [{ embedding }] = await this.agent.getEmbedding(query);
+    const [{ embedding }] = await this.agent.getEmbedding(query.toLowerCase());
     const similarities = await this.embeddingFacade.selectSimilarityUseCase.execute(embedding);
     return similarities.map(({ content }) => content);
   }

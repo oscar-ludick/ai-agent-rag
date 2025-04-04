@@ -18,16 +18,16 @@ CREATE TABLE IF NOT EXISTS "messages"
     "updated_at" timestamp DEFAULT now()  NOT NULL
 );
 
-CREATE TABLE "embeddings"
-(
-    "id"          varchar(191) PRIMARY KEY,
-    "content"     text        NOT NULL,
-    "embedding"   vector(768) NOT NULL,
-    "resource_id" varchar(191),
-    CONSTRAINT "embeddings_resource_id_fkey"
-        FOREIGN KEY ("resource_id") REFERENCES "resources" ("id") ON DELETE CASCADE
-);
-
-CREATE INDEX "embeddingIndex"
-    ON "embeddings"
-        USING hnsw ("embedding" vector_cosine_ops);
+-- CREATE TABLE "embeddings"
+-- (
+--     "id"          varchar(191) PRIMARY KEY,
+--     "content"     text        NOT NULL,
+--     "embedding"   vector(768) NOT NULL,
+--     "resource_id" varchar(191),
+--     CONSTRAINT "embeddings_resource_id_fkey"
+--         FOREIGN KEY ("resource_id") REFERENCES "resources" ("id") ON DELETE CASCADE
+-- );
+--
+-- CREATE INDEX "embeddingIndex"
+--     ON "embeddings"
+--         USING hnsw ("embedding" vector_cosine_ops);

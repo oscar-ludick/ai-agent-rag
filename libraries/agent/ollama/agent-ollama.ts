@@ -16,7 +16,7 @@ export class AgentOllama extends Agent {
 
   private readonly embedding!: AgentOllamaEmbeddingService;
 
-  private readonly history!: AgentMessage[];
+  private history!: AgentMessage[];
 
   constructor(model: string, alive: string) {
     super(model, alive);
@@ -24,7 +24,6 @@ export class AgentOllama extends Agent {
     this.prompt = new AgentPrompt();
     this.embedding = new AgentOllamaEmbeddingService();
     this.client = new AgentOllamaClientService(this.model, this.alive);
-    this.history = [this.prompt.initPrompt('')];
   }
 
   public getId(): string {
@@ -38,10 +37,12 @@ export class AgentOllama extends Agent {
 
   public async getChat(chat: AgentChat, onResponse: AgentResponse): Promise<AgentMessage[]> {
     const { prompt, resources } = chat;
+    this.history = this.history ? this.history : [this.prompt.initPrompt(chat.initialInstruction)];
     const resource: string = this.joinResource(resources);
     const userMessage: AgentMessage = this.prompt.forUser(prompt);
-    const systemMessage: AgentMessage = this.prompt.forSystem('', resource);
+    const systemMessage: AgentMessage = this.prompt.forSystem(chat.concurrentInstruction, resource);
     this.history.push(systemMessage, userMessage);
+    console.log(this.history);
     const response: string = await this.client.chat(this.history, onResponse);
     const assistantMessage: AgentMessage = this.prompt.forAssistant(response);
     this.history.push(assistantMessage);
@@ -52,6 +53,6 @@ export class AgentOllama extends Agent {
     if (!Array.isArray(resource)) {
       return resource || '';
     }
-    return resource.join('\n\n');
+    return resource.join('\t\t');
   }
 }

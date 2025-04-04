@@ -7,6 +7,7 @@
   "scripts": {
     "start": "npx tsx ./index.ts",
     "clean": "rm -rf ./node_modules ./package-lock.json",
+    "agent:model": "ollama create agent-rag-model -f resources/model/Modelfile_mistral",
     "db:migrate": "tsx ./database/postgres/migrations/migrate.ts",
     "db:studio": "drizzle-kit studio",
     "db:drop": "drizzle-kit drop",
@@ -20,9 +21,10 @@
     "drizzle-orm": "^0.38.4",
     "drizzle-zod": "^0.6.1",
     "nanoid": "^5.0.9",
+    "node-ensure": "^0.0.0",
     "ollama": "^0.5.12",
+    "pdfjs-dist": "^5.1.91",
     "postgres": "^3.4.5",
-    "winston": "^3.17.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {

@@ -43,6 +43,7 @@ export class ScannerService extends Scanner {
     this.scanner = readline.createInterface({ input, output });
     this.scanner.on(ScannerEvent.LINE, async (prompt: string): Promise<void> => {
       await this.scannerBuilderModel.action(prompt, onStdout);
+      console.log();
       this.scanner.prompt();
     });
     this.scanner.question(message, () => this.scanner.prompt());
